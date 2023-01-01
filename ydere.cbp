@@ -30,7 +30,16 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-m32" />
+			<Add option="-Ic:\gtk342_static\include\gtk-3.0 -Ic:\gtk342_static\include\glib-2.0 -Ic:\gtk342_static\lib\glib-2.0\include -Ic:\gtk342_static\include\gdk-pixbuf-2.0 -Ic:\gtk342_static\include\pango-1.0 -Ic:\gtk342_static\include\cairo -Ic:\gtk342_static\include\atk-1.0" />
 		</Compiler>
+		<Linker>
+			<Add option="-m32" />
+			<Add option="-Lc:\MinGW\lib -Lc:\MinGW\lib\gcc\mingw32\6.3.0 -Lc:\msys64\mingw64\lib -Lc:\gtk342_static\lib -lgtk-3 -lgdk-3 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -lpango-1.0 -latk-1.0 -lcairo -lcairo-gobject -lpangocairo-1.0 -lintl -lgmodule-2.0 -lgio-2.0 -limm32 -luser32 -lgdi32 -luuid -lole32 -lpng -lgdiplus -lpangowin32-1.0 -lffi -lws2_32 -lwinmm -lglib-2.0 -lpixman-1 -lfreetype -lfontconfig -lpangoft2-1.0 -lmsimg32 -liconv -lshlwapi -lz -lgdi32 -ldnsapi -lusp10 -lfreetype -lexpat -lgcc -lkernel32 -lmsvcrt" />
+		</Linker>
+		<Unit filename="Sources/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
